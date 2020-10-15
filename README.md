@@ -29,7 +29,8 @@ Desenvolver um painel (área logada) onde o usuário entrará com o e-mail e con
 - Se o usuário não estiver logado ele não poderá acessar a página de `/minha-conta`
 - Na tela inicial do `/minha-conta` exibir um `form` para cadastrar endereços
   - Usar a nossa própria `api` -> [Buscar endereços](https://dev-addresses-api.proximaporta.com/v1/postal-code/14030360)
-  - Deve ser validado se o CEP não existir, exibir um feedback para o usuário e salvar o CEP inválido em uma variável de cache (Obs. Variável deve ser um Array)
+  - Deverá ser validado se o CEP existe ou não
+  - Se não existir, exibir um feedback para o usuário e salvar este CEP inválido em uma variável de cache (Obs. Variável deve ser um Array)
   - Antes de verificar o CEP na `api` consultar a variável de cache, se CEP estiver nela exibir feedback de "CEP inválido"
   - Para CEP válidos preencher os demais campos automático (street_name, neighborhood_name, city_name, state_initials)
   - Validar campos obrigatórios (postal_code, street_name, street_number, neighborhood_name, city_name, state_initials)
